@@ -1,3 +1,5 @@
 arquivo.txt
 out/
 pratica-arquivos.iml
+.idea
+*.iml
