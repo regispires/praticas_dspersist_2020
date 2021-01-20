@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory2 {
 
-    public static Connection getConnection() throws SQLException {
+    public static Connection getConnection() {
         try {
             Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/dspersist2021",
@@ -12,8 +12,8 @@ public class ConnectionFactory2 {
             System.out.println("Conectado");
             return conn;
 
-        } catch (ClassNotFoundException e) {
-            throw new SQLException(e.getMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 
