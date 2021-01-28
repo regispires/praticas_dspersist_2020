@@ -1,32 +1,27 @@
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
 
-public class ContatoJPADAO implements ContatoDAO {
+public class ContatoJPADAOComJPAUtil implements ContatoDAO {
     public void adiciona(Contato contato) {
-        EntityManager em = Persistence.createEntityManagerFactory("dev")
-                .createEntityManager();
-
-        EntityTransaction tx = em.getTransaction();
+        EntityManager em = JPAUtil.getEntityManager();
         try {
-            tx.begin();
+            JPAUtil.beginTransaction();
             em.persist(contato);
-            tx.commit();
+            JPAUtil.commit();
         } catch (Exception e) {
-            tx.rollback();
+            JPAUtil.rollback();
             e.printStackTrace();
         } finally {
-            em.close();
+            JPAUtil.closeEntityManager();
         }
     }
 
     public List<Contato> getLista() {
-        EntityManager em = Persistence.createEntityManagerFactory("dev")
-                .createEntityManager();
+        EntityManager em = JPAUtil.getEntityManager();
         List<Contato> l = em.createQuery("select c from Contato as c", Contato.class).getResultList();
-        em.close();
+        JPAUtil.closeEntityManager();
         return l;
     }
 
