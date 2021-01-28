@@ -1,0 +1,8 @@
+ExemploInsertDAO.class
+ExemploQueryDAO.class
+ContatoJPADAO.class
+Contato.class
+ConnectionFactory.class
+ContatoDAO.class
+JPAUtil.class
+ContatoJDBCDAO.class
