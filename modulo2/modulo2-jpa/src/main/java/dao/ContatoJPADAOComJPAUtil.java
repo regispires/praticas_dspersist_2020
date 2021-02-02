@@ -1,6 +1,9 @@
+package dao;
+
+import entity.Contato;
+import util.JPAUtil;
+
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 import java.util.List;
 
 public class ContatoJPADAOComJPAUtil implements ContatoDAO {

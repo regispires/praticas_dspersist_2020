@@ -1,3 +1,5 @@
+package entity;
+
 import javax.persistence.*;
 
 @Entity
@@ -58,7 +60,7 @@ public class Contato {
 
     @Override
     public String toString() {
-        return "Contato{" +
+        return "entity.Contato{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +

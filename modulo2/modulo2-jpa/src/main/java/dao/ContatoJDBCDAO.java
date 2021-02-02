@@ -1,3 +1,8 @@
+package dao;
+
+import entity.Contato;
+import util.ConnectionFactory;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +45,7 @@ public class ContatoJDBCDAO implements ContatoDAO {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                // criando o objeto Contato
+                // criando o objeto entity.Contato
                 Contato contato = new Contato();
                 contato.setId(rs.getInt("id"));
                 contato.setNome(rs.getString("nome"));
@@ -69,7 +74,7 @@ public class ContatoJDBCDAO implements ContatoDAO {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                // criando o objeto Contato
+                // criando o objeto entity.Contato
                 Contato contato = new Contato();
                 contato.setId(rs.getInt("id"));
                 contato.setNome(rs.getString("nome"));

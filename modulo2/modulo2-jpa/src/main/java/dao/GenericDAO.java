@@ -1,4 +1,4 @@
-package br.ufc.dsweb.dao;
+package dao;
 
 import java.util.List;
 

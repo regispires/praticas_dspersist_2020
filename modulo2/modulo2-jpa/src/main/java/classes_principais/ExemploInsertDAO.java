@@ -1,9 +1,13 @@
-import java.util.List;
+package classes_principais;
+
+import dao.ContatoDAO;
+import dao.ContatoJPADAOComJPAUtil;
+import entity.Contato;
 
 public class ExemploInsertDAO {
     public static void main(String[] args) {
-        //ContatoDAO contatoDAO = new ContatoJDBCDAO();
-        //ContatoDAO contatoDAO = new ContatoJPADAO();
+        //dao.ContatoDAO contatoDAO = new dao.ContatoJDBCDAO();
+        //dao.ContatoDAO contatoDAO = new dao.ContatoJPADAO();
         ContatoDAO contatoDAO = new ContatoJPADAOComJPAUtil();
 
         Contato c = new Contato("Maria José", "mariajose@gmail.com", "R. Maria Jose 123");

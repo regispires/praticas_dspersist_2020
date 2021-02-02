@@ -1,3 +1,5 @@
+package util;
+
 import javax.persistence.*;
 
 public class JPAUtil {

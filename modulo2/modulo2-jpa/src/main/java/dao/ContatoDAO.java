@@ -1,3 +1,7 @@
+package dao;
+
+import entity.Contato;
+
 import java.util.List;
 
 public interface ContatoDAO {
