@@ -4,6 +4,7 @@ import entity.Contato;
 import util.JPAUtil;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContatoJPADAOComJPAUtil implements ContatoDAO {
@@ -11,7 +12,7 @@ public class ContatoJPADAOComJPAUtil implements ContatoDAO {
         EntityManager em = JPAUtil.getEntityManager();
         try {
             JPAUtil.beginTransaction();
-            em.persist(contato);
+            em.merge(contato);
             JPAUtil.commit();
         } catch (Exception e) {
             JPAUtil.rollback();
