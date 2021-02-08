@@ -2,6 +2,9 @@ package entity;
 
 import javax.persistence.*;
 
+@NamedQuery(name="Contato.findAll", query="select c from Contato as c")
+@NamedQuery(name="Contato.findByIniciadosPorNome", query="select c from Contato as c where c.nome like :nome")
+
 @Entity
 @Table(name = "contatos")
 public class Contato {

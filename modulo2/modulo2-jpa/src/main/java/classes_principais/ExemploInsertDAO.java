@@ -10,7 +10,7 @@ public class ExemploInsertDAO {
         //dao.ContatoDAO contatoDAO = new dao.ContatoJPADAO();
         ContatoDAO contatoDAO = new ContatoJPADAOComJPAUtil();
 
-        Contato c = new Contato("João", "joao@gmail.com", "R. João 123");
+        Contato c = new Contato("João Pedro", "joaopedro@gmail.com", "R. João 123");
         contatoDAO.adiciona(c);
     }
 }
